@@ -62,7 +62,7 @@ body {
   background: linear-gradient(45deg, #00bfff 0%, #afeeee 52%);
   animation: gradient 15s ease infinite;
   background-size: 400% 400%;
-  background-image: url("https://images.unsplash.com/photo-1584701782235-beff0661e16a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80");
+  background-image: url("https://images.unsplash.com/photo-1584701782235-beff0661e16a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=81");
 }
 .projects-grid {
   display: flex;
