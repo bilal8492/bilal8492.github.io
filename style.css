@@ -1,19 +1,28 @@
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 130px;
+  scrollbar-color: red;
 }
 body {
   margin: 0;
+  background-color: #023e8a;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 #navbar {
-  width: 100%;
-  background-color: #90e0ef;
+  width: 95vw;
+  background-color: rgba(229, 229, 229, 0.65);
   position: fixed;
 
   z-index: 999;
   display: flex;
   justify-content: flex-end;
   top: 0;
+  margin: 20px 0;
+  border-radius: 10px;
 }
 #navbar ul {
   display: flex;
@@ -31,11 +40,12 @@ body {
 }
 #welcome-section {
   height: 100vh;
+  width: 95vw;
+  border-radius: 10px;
   /* background: linear-gradient(45deg, #20b2aa 0%, #ffe4b5 52%);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite; */
-  background-color: #0096c7;
-  background-image: linear-gradient(19deg, #0096c7 0%, #023e8a 100%);
+  background-color: rgba(229, 229, 229, 0.65);
 
   color: #03045e;
   font-size: 40px;
@@ -44,7 +54,7 @@ body {
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  margin-top: 96px;
+  margin-top: 130px;
   /* background-image: url("https://images.unsplash.com/photo-1584701782235-beff0661e16a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"); */
 }
 #welcome-section h1 {
@@ -61,13 +71,20 @@ body {
   color: #023e8a;
 }
 #projects {
-  width: 100%;
+  width: 95vw;
+  border-radius: 10px;
+  /* scroll-padding: 50px 0 0 0px; */
+  margin-top: 20px;
   padding: 30px 0;
-  background-color: #0096c7;
+  background-color: rgba(229, 229, 229, 0.65);
   /* background: linear-gradient(45deg, #00bfff 0%, #afeeee 52%);
   animation: gradient 15s ease infinite; */
   background-size: 400% 400%;
   /* background-image: url("https://images.unsplash.com/photo-1584701782235-beff0661e16a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=81"); */
+}
+.whatsend {
+  width: 100px;
+  margin: 38px auto 38px auto;
 }
 .projects-grid {
   display: flex;
@@ -106,8 +123,11 @@ body {
   font-size: 20px;
 }
 #contact {
-  background: #0096c7;
+  background-color: rgba(229, 229, 229, 0.65);
+  width: 95vw;
+  border-radius: 10px;
   padding: 30px 0;
+  margin-top: 20px;
 }
 #contact a i {
   font-size: 30px;
@@ -121,6 +141,12 @@ body {
 .card {
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
   border-radius: 0px !important;
+  border: 0;
+  /* background-clip: padding-box; */
+}
+.card img {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .contact-section-header a {
   display: flex;
