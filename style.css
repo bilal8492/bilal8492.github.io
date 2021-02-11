@@ -1,7 +1,6 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 130px;
-  scrollbar-color: red;
 }
 body {
   margin: 0;
@@ -154,8 +153,26 @@ body {
   color: black;
 }
 @media (max-width: 700px) {
+  html {
+    scroll-padding-top: 95px;
+  }
+  #welcome-section {
+    margin-top: 90px;
+  }
   .projects-grid > div {
     margin-top: 20px;
+  }
+  #navbar ul {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+  }
+  #navbar ul li a {
+    padding: 0;
   }
 }
 
