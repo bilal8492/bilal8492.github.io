@@ -1,36 +1,55 @@
-import './style.css'
+// Add Typed.js library
+const script = document.createElement("script");
+script.src = "https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js";
+script.async = true;
 
-// Typing animation
-const typed = new Typed('.text', {
-  strings: ['React Native Developer', 'Mobile App Developer', 'Cross-Platform Expert'],
-  typeSpeed: 100,
-  backSpeed: 100,
-  backDelay: 1000,
-  loop: true
-});
+script.onload = () => {
+  // Initialize Typed.js after the library is loaded
+  const typed = new Typed(".text", {
+    strings: [
+      "React Native Developer",
+      "Mobile App Developer",
+      "Cross-Platform Expert",
+    ],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true,
+  });
+};
+document.head.appendChild(script);
 
 // Scroll sections
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+let sections = document.querySelectorAll("section");
+let navLinks = document.querySelectorAll("header nav a");
 
 window.onscroll = () => {
-  sections.forEach(sec => {
+  sections.forEach((sec) => {
     let top = window.scrollY;
     let offset = sec.offsetTop - 150;
     let height = sec.offsetHeight;
-    let id = sec.getAttribute('id');
+    let id = sec.getAttribute("id");
 
     if (top >= offset && top < offset + height) {
-      navLinks.forEach(links => {
-        links.classList.remove('active');
-        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+      navLinks.forEach((links) => {
+        links.classList.remove("active");
+        document
+          .querySelector("header nav a[href*=" + id + "]")
+          .classList.add("active");
       });
     }
   });
 };
 
-// Add Typed.js library
-const script = document.createElement('script');
-script.src = 'https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js';
-script.async = true;
-document.head.appendChild(script);
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const navLinksContainer = document.querySelector(".nav-links");
+
+  if (hamburger) {
+    hamburger.addEventListener("click", () => {
+      navLinksContainer.classList.toggle("active");
+    });
+  } else {
+    console.error("Hamburger element not found");
+  }
+});
