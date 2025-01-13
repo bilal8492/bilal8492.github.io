@@ -531,6 +531,18 @@ footer {
   }
 }
 
+/* Media query for tablets */
+@media (max-width: 1024px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-img {
+    margin-bottom: 2rem;
+  }
+}
+
 /* Media query for mobile devices */
 @media (max-width: 768px) {
   nav {
@@ -539,5 +551,21 @@ footer {
 
   .hamburger {
     display: block;
+  }
+
+  .about-text h3 {
+    font-size: 2.5rem;
+  }
+
+  .about-text p {
+    font-size: 1.4rem;
+  }
+
+  .experience-box h4 {
+    font-size: 1.8rem;
+  }
+
+  .experience-box p {
+    font-size: 1.2rem;
   }
 }
