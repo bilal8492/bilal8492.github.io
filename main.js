@@ -43,13 +43,36 @@ window.onscroll = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
+  const drawer = document.querySelector(".drawer");
   const navLinksContainer = document.querySelector(".nav-links");
 
   if (hamburger) {
     hamburger.addEventListener("click", () => {
       navLinksContainer.classList.toggle("active");
+      toggleDrawer();
     });
   } else {
     console.error("Hamburger element not found");
   }
+
+  if (drawer) {
+    drawer.addEventListener("click", () => {
+      toggleDrawer();
+    });
+  }
+
+  function toggleDrawer() {
+    const drawer = document.getElementById("drawer");
+    drawer.classList.toggle("open");
+  }
+
+  const drawerItems = document.querySelectorAll(".drawer a");
+  drawerItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      drawerItems.forEach((item) => {
+        item.classList.remove("active");
+      });
+      item.classList.add("active");
+    });
+  });
 });

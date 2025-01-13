@@ -44,6 +44,49 @@ header {
   z-index: 100;
 }
 
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  height: 100%;
+  width: 250px;
+  background-color: #323946;
+  color: white;
+  transition: right 0.3s ease;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.drawer a {
+  display: block;
+  margin: 10px 0;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.drawer.open {
+  right: 0;
+}
+
+.close-icon {
+  font-size: 24px;
+  cursor: pointer;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger i {
+  font-size: 24px;
+  color: white;
+}
+
 
 .nav-links {
   display: flex;
@@ -90,6 +133,13 @@ nav a:hover,
 nav a.active {
   color: var(--main-color);
 }
+
+.drawer a:hover,
+.drawer a.active {
+  color: var(--main-color);
+}
+
+
 
 #home {
   display: flex;
@@ -483,15 +533,8 @@ footer {
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
-  .nav-links {
+  nav {
     display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-links.active {
-    display: flex;
   }
 
   .hamburger {
