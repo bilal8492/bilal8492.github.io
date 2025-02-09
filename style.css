@@ -327,6 +327,7 @@ span {
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
+  margin-top: 3rem;
 }
 
 .skills-container .skills-box {
@@ -357,7 +358,7 @@ span {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-top: 40px;
+  margin-top: 3rem;
 }
 
 .projects-box {
@@ -438,7 +439,6 @@ span {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 60vh;
 }
 
 .contact-links {
