@@ -4,6 +4,7 @@ script.src = "https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js";
 script.async = true;
 
 script.onload = () => {
+  document.getElementById("year").textContent = new Date().getFullYear();
   // Initialize Typed.js after the library is loaded
   const typed = new Typed(".text", {
     strings: [
