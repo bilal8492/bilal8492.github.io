@@ -316,7 +316,6 @@ span {
   margin-bottom: 0;
 }
 
-/* Rest of your existing CSS */
 
 .skills h2 {
   margin-bottom: 5rem;
@@ -354,86 +353,84 @@ span {
   font-size: 2.6rem;
 }
 
-.projects {
-  background: var(--second-bg-color);
-}
-
-.projects h2 {
-  margin-bottom: 4rem;
-}
-
 .projects-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  gap: 2.5rem;
-  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 40px;
 }
 
 .projects-box {
-  position: relative;
-  border-radius: 2rem;
-  box-shadow: 0 0 1rem var(--bg-color);
-  overflow: hidden;
+  width: 330px;
+  height: 250px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--second-bg-color);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
-.projects-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: .5s ease;
-}
-
-.projects-box:hover img {
+.projects-box:hover {
   transform: scale(1.1);
 }
 
-.project-layer {
-  position: absolute;
-  bottom: 0;
+.app-icon {
+  width: 330px;
+  height: 250px;
+  border-radius: 1rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.modal.show {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  opacity: 1;
+}
+.modal-content {
+  background: rgba(50, 50, 50, 0.8);
+  padding: 2rem;
+  border-radius: 10px;
   text-align: center;
-  padding: 0 4rem;
-  transform: translateY(100%);
-  transition: .5s ease;
+  color: white;
+  animation: fadeIn 0.5s ease-in-out;
+  position: relative;
 }
 
-.projects-box:hover .project-layer {
-  transform: translateY(0);
-}
-
-.project-layer h4 {
-  font-size: 3rem;
-  color: var(--text-color);
-}
-
-.project-layer p {
-  font-size: 1.6rem;
-  margin: .3rem 0 1rem;
-  color: var(--text-color);
-}
-
-.project-layer a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 5rem;
-  height: 5rem;
-  background: var(--text-color);
-  border-radius: 50%;
-}
-
-.project-layer a i {
+.close {
+  position: absolute;
+  top: 4px;
+  right: 14px;
   font-size: 2rem;
-  color: var(--second-bg-color);
+  cursor: pointer;
+}
+
+.modal-buttons a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background: var(--main-color);
+  color: var(--bg-color);
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .contact-content {
@@ -567,5 +564,9 @@ footer {
 
   .experience-box p {
     font-size: 1.2rem;
+  }
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
   }
 }
