@@ -155,7 +155,7 @@ nav a.active {
 }
 .mouse-scroll{
   position: absolute;
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   top: 0;
   left: 0;
