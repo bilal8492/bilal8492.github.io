@@ -42,6 +42,16 @@ window.onscroll = () => {
   });
 };
 
+window.addEventListener("scroll", function () {
+  const mouseIcon = document.querySelector(".mouse-icon");
+  if (window.scrollY > 50) {
+    // Adjust 50 to change when it hides
+    mouseIcon.style.display = "none";
+  } else {
+    mouseIcon.style.display = "block";
+  }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
   const drawer = document.querySelector(".drawer");
