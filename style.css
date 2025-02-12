@@ -153,20 +153,12 @@ nav a.active {
   position: relative;
   min-height: 100dvh;
 }
-.mouse-scroll{
-  position: absolute;
-  height: 100dvh;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
 .mouse-icon {
   height: 5rem;
   width: 5rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .home-content {
