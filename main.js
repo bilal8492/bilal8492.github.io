@@ -100,26 +100,30 @@ document.addEventListener("DOMContentLoaded", () => {
   modal.style.display = "none";
 
   const projectData = {
-    ecommerce: {
-      title: "E-commerce App",
+    jarc: {
+      title: "Jebel Ali Racecourse",
       description:
-        "A modern e-commerce platform with secure payments and a smooth shopping experience.",
-      ios: "https://apps.apple.com/ecommerce-app",
-      android: "https://play.google.com/ecommerce-app",
+        "Introducing the Jebel Ali Racecourse (JARC) App, the ultimate racegoer mobile app experience. Stay updated with real-time race fixtures, results, and exclusive benefits. Designed with a seamless UI, the app ensures users never miss an update. As the lead developer, I built the app from scratch, handling UI/UX, API integrations, and deployment to both iOS and Android platforms.",
+      ios: "https://apps.apple.com/ae/app/jebel-ali-racecourse/id6476908300",
+      android:
+        "https://play.google.com/store/apps/details?id=com.jarc.app&hl=en_IN",
     },
-    portfolio: {
-      title: "Portfolio App",
+    huna: {
+      title: "HUNA Living",
       description:
-        "A personal portfolio showcasing my skills, projects, and achievements.",
-      ios: "https://apps.apple.com/portfolio-app",
-      android: "https://play.google.com/portfolio-app",
+        "HUNA is a premier real estate app for discovering and reserving curated residences, retail destinations, and cultural experiences. Led a team of 4 developers to build a secure, high-performance app with Salesforce authentication, Firebase push notifications, and Sentry crash monitoring. Implemented IoT device management, CodePush for seamless updates, and enhanced security with SSL Pinning and Remote Config.",
+
+      ios: "https://apps.apple.com/ae/app/huna-living/id6463616889",
+      android:
+        "https://play.google.com/store/apps/details?id=com.hunaproperties.app&hl=en_IN",
     },
-    "task-manager": {
-      title: "Task Manager App",
+    drec: {
+      title: "DREC eServices",
       description:
-        "An efficient task management app with real-time collaboration features.",
-      ios: "https://apps.apple.com/task-manager-app",
-      android: "https://play.google.com/task-manager-app",
+        "Exclusively for DREC tenants, this app streamlines property management with Virtual Key access, contract handling, payments, and maintenance requests. As a senior developer, I built a secure, feature-rich app integrating Salesforce for authentication, Firebase for push notifications, and Sentry for crash monitoring. Developed a custom IoT module and enhanced security with SSL Pinning and Remote Config.",
+      ios: "https://apps.apple.com/ae/app/drec-eservices/id1663713914",
+      android:
+        "https://play.google.com/store/apps/details?id=com.drec.ae&hl=en_IN",
     },
   };
 

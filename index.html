@@ -157,20 +157,22 @@
   <section id="projects">
     <h2 class="heading">Latest <span>Projects</span></h2>
     <div class="projects-container">
-      <div class="projects-box" onclick="openModal('ecommerce')">
-        <img
-          src="https://play-lh.googleusercontent.com/iVT1uyvspa51LbVbEwYU8gyH_QIc4HS5yRGAQXKyLPQdJBs1rnbFBI3RX4Ejar1vw2s=w480-h960-rw "
-          alt="E-commerce App Icon" class="app-icon">
-      </div>
-      <div class="projects-box" onclick="openModal('portfolio')">
+
+      <div class="projects-box" onclick="openModal('huna')">
         <img
           src="https://play-lh.googleusercontent.com/zTDTSF8ubueObASr1KInqihqFiUVOPDbMBhWJ8vVGc74oSj7GGXteMg303PDCaVKZKae=w480-h960-rw"
-          alt="Portfolio App Icon" class="app-icon">
+          alt="HUNA App Icon" class="app-icon">
       </div>
-      <div class="projects-box" onclick="openModal('task-manager')">
+      <div class="projects-box" onclick="openModal('jarc')">
+        <img
+          src="https://play-lh.googleusercontent.com/E9KxIZQlIi339dRnPd3uMnTwdVHoglgliTnaKUy8dovgum35aixbtVXYFJjTPbsewg=w832-h470-rw"
+          alt="JARC App Icon" class="app-icon">
+      </div>
+
+      <div class="projects-box" onclick="openModal('drec')">
         <img
           src="https://play-lh.googleusercontent.com/Fjfp14YlwyqhPr5q2FmaCMdJxMdzV62aMEttdsaxpAMAs3ZRKm07_mObcqrx7EFLUOA=w480-h960-rw"
-          alt="Task Manager App Icon" class="app-icon">
+          alt="DREC App Icon" class="app-icon">
       </div>
     </div>
   </section>
@@ -178,11 +180,18 @@
   <div id="project-modal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
-      <h4 id="modal-title"></h4>
-      <p id="modal-description"></p>
+      <span>
+        <h1 id="modal-title"></h1>
+      </span>
+      <p id="modal-description" class="modal-description"></p>
       <div class="modal-buttons">
-        <a id="ios-link" href="#" target="_blank">iOS</a>
-        <a id="android-link" href="#" target="_blank">Android</a>
+        <a id="ios-link" href="#" target="_blank">
+          <i class="fa-brands fa-apple" style="font-size: 1.4rem;margin-top: -2px;"></i>
+          iOS
+        </a>
+        <a id="android-link" href="#" target="_blank">
+          <i class="fa-brands fa-android"></i> Android
+        </a>
       </div>
     </div>
   </div>
