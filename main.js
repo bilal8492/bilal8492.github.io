@@ -220,7 +220,7 @@ if ("IntersectionObserver" in window) {
 // Command palette (Ctrl/⌘ K)
 (() => {
   const onHome = !!document.getElementById("experience");
-  const home = onHome ? "" : "index.html";
+  const home = onHome ? "" : "/";
   const go = (hash) => () => {
     if (onHome) document.querySelector(hash)?.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
     else location.href = home + hash;
@@ -237,7 +237,7 @@ if ("IntersectionObserver" in window) {
     { group: "Navigate", label: "Selected apps", hint: "Section", run: go("#apps") },
     { group: "Navigate", label: "Open source projects", hint: "Section", run: go("#projects") },
     { group: "Navigate", label: "Contact", hint: "Section", run: go("#contact") },
-    { group: "Navigate", label: "Resume", hint: "Page", run: open("resume.html") },
+    { group: "Navigate", label: "Resume", hint: "Page", run: open("/resume.html") },
     { group: "Actions", label: "Copy email address", hint: EMAIL, run: copyEmail },
     { group: "Actions", label: "Download resume (PDF)", hint: "PDF", run: download("bilal_ansari_resume.pdf") },
     { group: "Actions", label: "Save contact card", hint: "vCard", run: download("bilal-ansari.vcf") },

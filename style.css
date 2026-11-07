@@ -384,3 +384,10 @@ footer { padding: 32px 0 48px; border-top: 1px solid var(--line); color: var(--m
 @media (pointer: coarse) {
   .cmdk-foot { display: none; }
 }
+
+/* Brand mark + name line in h1 */
+.brand { display: inline-flex; align-items: center; gap: 9px; }
+.brand .mark { width: 22px; height: 22px; color: var(--fg); flex: none; transition: transform 0.3s cubic-bezier(.2,.7,.2,1); }
+.brand:hover .mark { transform: rotate(-8deg); }
+.h1-name { display: block; font-size: 1.15rem; font-weight: 600; letter-spacing: -0.01em; color: var(--fg); margin-bottom: 10px; }
+@media (prefers-reduced-motion: reduce) { .brand .mark { transition: none; } }

@@ -1,0 +1,16 @@
+{
+  "name": "Bilal Ansari · Senior React Native Engineer",
+  "short_name": "Bilal Ansari",
+  "description": "Portfolio and resume of Bilal Ansari, Senior React Native Engineer.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0f1012",
+  "theme_color": "#16171a",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/logo.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

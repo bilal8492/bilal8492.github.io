@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bilal Ansari | Senior React Native Engineer</title>
-  <meta name="description" content="Bilal Ansari - Senior React Native Engineer with 5+ years building production iOS and Android apps. Mobile architecture, CI/CD, performance and AI integration.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Bilal Ansari">
+  <title>Bilal Ansari · Senior React Native Engineer</title>
+  <meta name="description" content="Bilal Ansari, Senior React Native Engineer in Mumbai. 5+ years shipping iOS and Android apps: mobile architecture, performance, CI/CD and AI features.">
   <link rel="canonical" href="https://bilalansari.in/">
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Bilal Ansari">
+  <meta property="og:locale" content="en_IN">
   <meta property="og:title" content="Bilal Ansari · Senior React Native Engineer">
   <meta property="og:description" content="5+ years building production iOS and Android apps. Mobile architecture, performance, CI/CD and AI features.">
   <meta property="og:url" content="https://bilalansari.in/">
@@ -28,7 +31,10 @@
     try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
     document.documentElement.classList.add("js");
   </script>
-  <link rel="icon" type="image/png" href="./favIcon.png" />
+  <link rel="icon" href="/icons/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&display=swap">
@@ -38,16 +44,65 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Bilal Ansari",
-    "jobTitle": "Senior React Native Engineer",
-    "url": "https://bilalansari.in/",
-    "image": "https://bilalansari.in/og-image.png",
-    "email": "mailto:m.bilal8492@gmail.com",
-    "address": { "@type": "PostalAddress", "addressLocality": "Mumbai", "addressCountry": "IN" },
-    "sameAs": ["https://linkedin.com/in/bilal8492", "https://github.com/bilal8492"],
-    "knowsAbout": ["React Native", "TypeScript", "iOS", "Android", "Expo", "Mobile architecture", "CI/CD", "Performance optimization"],
-    "worksFor": { "@type": "Organization", "name": "Bizmatics, a Harris Computer Company" }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://bilalansari.in/#website",
+        "url": "https://bilalansari.in/",
+        "name": "Bilal Ansari",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://bilalansari.in/#person" }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://bilalansari.in/#profile",
+        "url": "https://bilalansari.in/",
+        "name": "Bilal Ansari · Senior React Native Engineer",
+        "isPartOf": { "@id": "https://bilalansari.in/#website" },
+        "mainEntity": { "@id": "https://bilalansari.in/#person" },
+        "dateModified": "2026-11-07"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://bilalansari.in/#person",
+        "name": "Bilal Ansari",
+        "givenName": "Bilal",
+        "familyName": "Ansari",
+        "jobTitle": "Senior React Native Engineer",
+        "description": "Senior React Native Engineer with 5+ years building production iOS and Android apps.",
+        "url": "https://bilalansari.in/",
+        "image": "https://bilalansari.in/icons/icon-512.png",
+        "email": "mailto:m.bilal8492@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Mumbai", "addressRegion": "Maharashtra", "addressCountry": "IN" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Mumbai" },
+        "knowsLanguage": ["English", "Hindi", "Urdu"],
+        "sameAs": ["https://www.linkedin.com/in/bilal8492", "https://github.com/bilal8492"],
+        "knowsAbout": ["React Native", "TypeScript", "JavaScript", "iOS development", "Android development", "Expo", "Mobile app architecture", "CI/CD", "Fastlane", "GitHub Actions", "App performance optimization", "AI feature integration"]
+      }
+,
+      {
+        "@type": "SoftwareApplication",
+        "name": "ReelGuard",
+        "url": "https://bilalansari.in/ReelGuard/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android",
+        "description": "Android app that counts Instagram Reels and YouTube Shorts watched each day and enforces a daily limit. On-device only.",
+        "author": { "@id": "https://bilalansari.in/#person" },
+        "codeRepository": "https://github.com/bilal8492/ReelGuard",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Updraft",
+        "url": "https://bilalansari.in/updraft/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Windows",
+        "description": "Graphical front end for winget on Windows: scan for updates, pick apps and run or copy the commands.",
+        "author": { "@id": "https://bilalansari.in/#person" },
+        "codeRepository": "https://github.com/bilal8492/updraft",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    ]
   }
   </script>
 
@@ -55,7 +110,7 @@
 <body>
   <header>
     <div class="wrap">
-      <a class="brand" href="#top">Bilal Ansari</a>
+      <a class="brand" href="/"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="currentColor"/><path d="M17 15V49M17 15H28a8 8 0 0 1 0 16H17M17 31H30a9 9 0 0 1 0 18H17" fill="none" stroke="var(--bg)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="49.5" cy="45.5" r="3.6" fill="var(--accent)"/></svg><span>Bilal Ansari</span></a>
       <nav>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
@@ -72,7 +127,7 @@
     <div class="hero">
       <div class="hero-text">
       <p class="eyebrow status">Available immediately &middot; Mumbai, India</p>
-      <h1>Senior React Native Engineer.</h1>
+      <h1><span class="h1-name">Bilal Ansari</span> Senior React Native Engineer.</h1>
       <p class="lede">5+ years building, modernizing and maintaining production iOS and Android apps across
         healthcare, property management, sports and media. Strong in mobile architecture, performance, CI/CD and
         AI feature integration.</p>
