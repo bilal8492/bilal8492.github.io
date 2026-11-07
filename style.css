@@ -30,7 +30,7 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; overflow-x: hidden; }
 
 body {
   background: var(--bg);
@@ -54,7 +54,7 @@ header {
   border-bottom: 1px solid var(--line);
 }
 header .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; }
-.brand { font-weight: 600; letter-spacing: -0.01em; }
+.brand { font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; }
 nav { display: flex; align-items: center; gap: 22px; font-size: 14px; color: var(--muted); }
 nav a { transition: color 0.2s; }
 nav a:hover, nav a[aria-current="page"] { color: var(--fg); }
@@ -145,7 +145,12 @@ footer { padding: 32px 0 48px; border-top: 1px solid var(--line); color: var(--m
   .hero { padding: 64px 0 40px; }
   .job, .skill-row { grid-template-columns: 1fr; gap: 2px; }
   .app { flex-direction: column; gap: 6px; }
-  nav { gap: 16px; }
+  header .wrap { flex-wrap: wrap; height: auto; padding-top: 10px; padding-bottom: 10px; row-gap: 6px; }
+  nav { gap: 16px; width: 100%; overflow-x: auto; scrollbar-width: none; white-space: nowrap; }
+  nav::-webkit-scrollbar { display: none; }
+  nav a { flex: none; }
+  #theme { flex: none; margin-left: auto; }
+  html { scroll-padding-top: 100px; }
 }
 
 /* Resume page */
