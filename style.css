@@ -66,6 +66,76 @@ nav a:hover, nav a[aria-current="page"] { color: var(--fg); }
   transition: color 0.2s, border-color 0.2s;
 }
 #theme:hover { color: var(--fg); border-color: var(--muted); }
+#theme { margin-left: 10px; }
+
+/* Command menu trigger */
+#cmdk {
+  margin-left: 22px; display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 8px 0 9px;
+  font: inherit; font-size: 12px; color: var(--muted); background: none; cursor: pointer;
+  border: 1px solid var(--line); border-radius: 8px; transition: color 0.2s, border-color 0.2s;
+}
+#cmdk:hover { color: var(--fg); border-color: var(--muted); }
+#cmdk kbd { font: inherit; font-size: 11.5px; letter-spacing: 0.02em; }
+.k-icon { /* magnifier */
+  width: 11px; height: 11px; border: 1.6px solid currentColor; border-radius: 50%; position: relative; flex: none; margin-top: -2px;
+}
+.k-icon::after { content: ""; position: absolute; width: 1.6px; height: 5px; background: currentColor; right: -3px; bottom: -4px; transform: rotate(-45deg); border-radius: 1px; }
+
+/* Active nav link */
+nav a { position: relative; }
+nav a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 1.5px; border-radius: 1px;
+  background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform 0.3s cubic-bezier(.2,.7,.2,1);
+}
+nav a.active { color: var(--fg); }
+nav a.active::after, nav a[aria-current="page"]::after { transform: scaleX(1); }
+
+/* Theme switch circle reveal */
+.vt-theme::view-transition-old(root), .vt-theme::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+.vt-theme::view-transition-new(root) { z-index: 2; }
+
+/* Reading progress (resume) */
+.progress {
+  position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--accent);
+  transform: scaleX(0); transform-origin: left; will-change: transform;
+}
+
+/* Toast */
+.toast {
+  position: fixed; left: 50%; bottom: 28px; z-index: 60; transform: translate(-50%, 16px); opacity: 0; pointer-events: none;
+  background: var(--fg); color: var(--bg); font-size: 14px; font-weight: 500; padding: 9px 16px; border-radius: 10px;
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.4); transition: opacity 0.25s, transform 0.3s cubic-bezier(.2,.7,.2,1);
+}
+.toast::before { content: "✓"; margin-right: 8px; color: #2fb26a; font-weight: 700; }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* Command palette */
+dialog.cmdk {
+  margin: 12vh auto auto; padding: 0; border: 0; background: none; width: min(560px, calc(100vw - 32px)); max-height: none; color: var(--fg);
+}
+dialog.cmdk::backdrop { background: rgba(10, 11, 14, 0.42); backdrop-filter: blur(3px); }
+dialog.cmdk[open] .cmdk-box { animation: pop 0.18s cubic-bezier(.2,.7,.2,1); }
+@keyframes pop { from { opacity: 0; transform: translateY(-6px) scale(0.985); } }
+.cmdk-box {
+  background: var(--bg); border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+  box-shadow: 0 24px 60px -20px rgba(0,0,0,0.5);
+}
+.cmdk-input {
+  width: 100%; border: 0; border-bottom: 1px solid var(--line); background: none; color: var(--fg);
+  font: inherit; font-size: 16px; padding: 16px 18px; outline: none;
+}
+.cmdk-input::placeholder { color: var(--muted); }
+.cmdk-list { list-style: none; max-height: min(360px, 52vh); overflow-y: auto; padding: 6px; scroll-padding: 6px; }
+.cmdk-group { font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding: 10px 12px 4px; }
+.cmdk-item {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 9px 12px; border-radius: 8px; cursor: pointer; font-size: 15px;
+}
+.cmdk-item small { color: var(--muted); font-size: 12.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cmdk-item[aria-selected="true"] { background: var(--chip); }
+.cmdk-empty { padding: 18px 12px; color: var(--muted); font-size: 14px; }
+.cmdk-foot { display: flex; gap: 16px; padding: 9px 16px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+.cmdk-foot kbd, .cmdk-foot kbd + kbd { font: inherit; font-size: 11px; border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; margin-right: 4px; }
 
 /* Hero */
 .hero { padding: 96px 0 56px; }
@@ -158,12 +228,14 @@ h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); line-height: 1.1; letter-spacing: -0
 .cap b { font-weight: 600; }
 .cap span { color: var(--muted); font-size: 13px; }
 .cap:hover b { color: var(--accent); }
-.dots { display: flex; gap: 6px; }
+.dots { display: flex; gap: 2px; }
 .dots button {
-  width: 22px; height: 4px; padding: 0; border: 0; border-radius: 2px; cursor: pointer;
-  background: var(--line); position: relative; overflow: hidden;
+  width: 26px; height: 24px; padding: 0; border: 0; cursor: pointer; background: none; position: relative;
 }
-.dots button::after { content: ""; position: absolute; inset: 0; background: var(--fg); transform: scaleX(0); transform-origin: left; }
+.dots button::before, .dots button::after {
+  content: ""; position: absolute; left: 2px; right: 2px; top: 10px; height: 4px; border-radius: 2px; background: var(--line);
+}
+.dots button::after { background: var(--fg); transform: scaleX(0); transform-origin: left; }
 .dots button[aria-selected="true"]::after { transform: scaleX(1); }
 .dots.playing button[aria-selected="true"]::after { animation: fill var(--dur, 3800ms) linear forwards; }
 @keyframes fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
@@ -224,6 +296,26 @@ h2 { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: 
   transition: transform 0.3s cubic-bezier(.2,.7,.2,1);
 }
 #projects .app:hover .picon { transform: translateY(-2px) rotate(-4deg); }
+.ptitle { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; }
+.gh { display: inline-flex; gap: 10px; font-size: 12.5px; color: var(--muted); opacity: 0; transition: opacity 0.4s; }
+.gh.ready { opacity: 1; }
+.gh .star b { font-weight: 600; color: var(--fg); }
+.gh .star + .upd::before { content: "·"; margin-right: 10px; }
+
+/* Cursor spotlight on rows */
+.app { position: relative; isolation: isolate; }
+.app::before {
+  content: ""; position: absolute; inset: 0 -14px; z-index: -1; border-radius: 12px; pointer-events: none;
+  background: radial-gradient(260px circle at calc(var(--mx, -999px) + 14px) var(--my, -999px), color-mix(in srgb, var(--accent) 13%, transparent), transparent 70%);
+  opacity: 0; transition: opacity 0.3s;
+}
+.app:hover::before { opacity: 1; }
+.app:first-child::before { top: -14px; }
+.app:last-child::before { bottom: -14px; }
+
+.contact-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+button.btn { font: inherit; font-size: 14px; font-weight: 500; color: inherit; background: none; cursor: pointer; }
+
 #projects code { background: var(--chip); border-radius: 4px; padding: 0 5px; font-size: 13px; }
 
 .contact p { color: var(--muted); margin-bottom: 14px; }
@@ -244,6 +336,8 @@ footer { padding: 32px 0 48px; border-top: 1px solid var(--line); color: var(--m
   .btn { transition: none; }
   .phone, .phone.tracking, .screen { transition: none; }
   .phone { transform: none; }
+  .toast, nav a::after, .app::before, .gh, .picon { transition: none; }
+  dialog.cmdk[open] .cmdk-box { animation: none; }
 }
 
 @media (max-width: 600px) {
@@ -256,8 +350,11 @@ footer { padding: 32px 0 48px; border-top: 1px solid var(--line); color: var(--m
   nav::-webkit-scrollbar { display: none; }
   nav a { flex: none; }
   .brand { order: 1; }
-  #theme { order: 2; flex: none; margin-left: auto; }
-  nav { order: 3; margin-left: 0; }
+  #cmdk { order: 2; flex: none; margin-left: auto; padding: 0; width: 30px; justify-content: center; border-radius: 50%; }
+  #cmdk kbd { display: none; }
+  .k-icon { margin: -2px 2px 0 0; }
+  #theme { order: 3; flex: none; margin-left: 8px; }
+  nav { order: 4; margin-left: 0; padding-bottom: 5px; }
   html { scroll-padding-top: 100px; }
 }
 
@@ -282,4 +379,8 @@ footer { padding: 32px 0 48px; border-top: 1px solid var(--line); color: var(--m
   .job { break-inside: avoid; margin-bottom: 14px; }
   .job ul { font-size: 10pt; }
   h2 { margin-bottom: 12px; }
+}
+
+@media (pointer: coarse) {
+  .cmdk-foot { display: none; }
 }

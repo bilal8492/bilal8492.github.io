@@ -5,11 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bilal Ansari | Senior React Native Engineer</title>
   <meta name="description" content="Bilal Ansari - Senior React Native Engineer with 5+ years building production iOS and Android apps. Mobile architecture, CI/CD, performance and AI integration.">
+  <link rel="canonical" href="https://bilalansari.in/">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Bilal Ansari">
+  <meta property="og:title" content="Bilal Ansari · Senior React Native Engineer">
+  <meta property="og:description" content="5+ years building production iOS and Android apps. Mobile architecture, performance, CI/CD and AI features.">
+  <meta property="og:url" content="https://bilalansari.in/">
+  <meta property="og:image" content="https://bilalansari.in/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bilal Ansari, Senior React Native Engineer">
+  <meta property="profile:first_name" content="Bilal">
+  <meta property="profile:last_name" content="Ansari">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bilal Ansari · Senior React Native Engineer">
+  <meta name="twitter:description" content="5+ years building production iOS and Android apps. Mobile architecture, performance, CI/CD and AI features.">
+  <meta name="twitter:image" content="https://bilalansari.in/og-image.png">
+  <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1012" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+    document.documentElement.classList.add("js");
+  </script>
   <link rel="icon" type="image/png" href="./favIcon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&display=swap"></noscript>
   <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bilal Ansari",
+    "jobTitle": "Senior React Native Engineer",
+    "url": "https://bilalansari.in/",
+    "image": "https://bilalansari.in/og-image.png",
+    "email": "mailto:m.bilal8492@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Mumbai", "addressCountry": "IN" },
+    "sameAs": ["https://linkedin.com/in/bilal8492", "https://github.com/bilal8492"],
+    "knowsAbout": ["React Native", "TypeScript", "iOS", "Android", "Expo", "Mobile architecture", "CI/CD", "Performance optimization"],
+    "worksFor": { "@type": "Organization", "name": "Bizmatics, a Harris Computer Company" }
+  }
+  </script>
+
 </head>
 <body>
   <header>
@@ -22,6 +63,7 @@
         <a href="#projects">Projects</a>
         <a href="resume.html">Resume</a>
       </nav>
+      <button id="cmdk" type="button" aria-label="Open command menu" aria-haspopup="dialog"><span class="k-icon" aria-hidden="true"></span><kbd>Ctrl K</kbd></button>
       <button id="theme" type="button" aria-label="Toggle color theme"></button>
     </div>
   </header>
@@ -29,12 +71,12 @@
   <main class="wrap" id="top">
     <div class="hero">
       <div class="hero-text">
-      <p class="eyebrow reveal status">Available immediately &middot; Mumbai, India</p>
-      <h1 class="reveal">Senior React Native Engineer.</h1>
-      <p class="lede reveal">5+ years building, modernizing and maintaining production iOS and Android apps across
+      <p class="eyebrow status">Available immediately &middot; Mumbai, India</p>
+      <h1>Senior React Native Engineer.</h1>
+      <p class="lede">5+ years building, modernizing and maintaining production iOS and Android apps across
         healthcare, property management, sports and media. Strong in mobile architecture, performance, CI/CD and
         AI feature integration.</p>
-      <div class="actions reveal">
+      <div class="actions">
         <a class="btn primary" href="resume.html">View resume</a>
         <a class="btn" href="bilal_ansari_resume.pdf" download>Download PDF</a>
         <a class="btn" href="mailto:m.bilal8492@gmail.com">Email me</a>
@@ -179,7 +221,7 @@
                 <path d="M48,46 L48,62 L62,54 Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round"/>
               </g>
             </svg>
-            <b>ReelGuard</b>
+            <div class="ptitle"><b>ReelGuard</b><span class="gh" data-repo="bilal8492/ReelGuard"></span></div>
             <p>An Android app that counts the Instagram Reels and YouTube Shorts you watch each day, lets you set a daily limit, and shows a limit-reached screen once you hit it. Regular videos, feeds, stories and messages are left alone. Everything stays on the device: no account, no analytics, no ads.</p>
             <div class="chips"><span>Kotlin</span><span>Accessibility Service</span><span>Android</span><span>GitHub Actions</span></div>
           </div>
@@ -196,7 +238,7 @@
                 <path d="M68 218 L128 176 L188 218"/>
               </g>
             </svg>
-            <b>Updraft</b>
+            <div class="ptitle"><b>Updraft</b><span class="gh" data-repo="bilal8492/updraft"></span></div>
             <p>A graphical front end for <code>winget</code> on Windows. It scans for available updates on launch, lets you pick the apps you want, then copies the commands or runs them in Windows Terminal or PowerShell. Also includes Installed and Discover views for browsing the winget catalogue.</p>
             <div class="chips"><span>C#</span><span>.NET 9</span><span>WinUI 3</span><span>Windows App SDK</span></div>
           </div>
@@ -213,6 +255,10 @@
         <a href="https://linkedin.com/in/bilal8492" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/bilal8492" target="_blank" rel="noopener">GitHub</a>
       </div>
+      <div class="contact-actions reveal">
+        <button type="button" class="btn" data-copy="m.bilal8492@gmail.com">Copy email</button>
+        <a class="btn" href="bilal-ansari.vcf" download>Save contact</a>
+      </div>
     </section>
   </main>
 
@@ -220,6 +266,6 @@
     <div class="wrap">&copy; <span id="year"></span> Bilal Ansari</div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
 </body>
 </html>

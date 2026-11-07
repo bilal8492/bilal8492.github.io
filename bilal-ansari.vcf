@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Ansari;Bilal;;;
+FN:Bilal Ansari
+TITLE:Senior React Native Engineer
+EMAIL;TYPE=INTERNET,PREF:m.bilal8492@gmail.com
+URL:https://bilalansari.in/
+URL;TYPE=LinkedIn:https://linkedin.com/in/bilal8492
+URL;TYPE=GitHub:https://github.com/bilal8492
+X-SOCIALPROFILE;TYPE=linkedin:https://linkedin.com/in/bilal8492
+X-SOCIALPROFILE;TYPE=github:https://github.com/bilal8492
+ADR;TYPE=HOME:;;;Mumbai;;;India
+NOTE:React Native · iOS & Android · Mobile architecture · CI/CD
+END:VCARD

@@ -5,10 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resume | Bilal Ansari</title>
   <meta name="description" content="Resume of Bilal Ansari, Senior React Native Engineer.">
+  <link rel="canonical" href="https://bilalansari.in/resume.html">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Bilal Ansari">
+  <meta property="og:title" content="Resume · Bilal Ansari">
+  <meta property="og:description" content="Senior React Native Engineer: iOS and Android, mobile architecture and CI/CD. Experience, skills and shipped apps.">
+  <meta property="og:url" content="https://bilalansari.in/resume.html">
+  <meta property="og:image" content="https://bilalansari.in/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bilal Ansari, Senior React Native Engineer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Resume · Bilal Ansari">
+  <meta name="twitter:description" content="Senior React Native Engineer: iOS and Android, mobile architecture and CI/CD.">
+  <meta name="twitter:image" content="https://bilalansari.in/og-image.png">
+  <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1012" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+    document.documentElement.classList.add("js");
+  </script>
   <link rel="icon" type="image/png" href="./favIcon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&display=swap"></noscript>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,12 +45,13 @@
         <a href="index.html#projects">Projects</a>
         <a href="resume.html" aria-current="page">Resume</a>
       </nav>
+      <button id="cmdk" type="button" aria-label="Open command menu" aria-haspopup="dialog"><span class="k-icon" aria-hidden="true"></span><kbd>Ctrl K</kbd></button>
       <button id="theme" type="button" aria-label="Toggle color theme"></button>
     </div>
   </header>
 
   <main class="wrap resume">
-    <div class="reveal">
+    <div>
       <h1>Bilal Ansari</h1>
       <p class="role">Senior React Native Engineer | iOS &amp; Android | Mobile Architecture &amp; CI/CD</p>
       <p class="meta">
@@ -149,6 +173,6 @@
     <div class="wrap">&copy; <span id="year"></span> Bilal Ansari</div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
 </body>
 </html>
