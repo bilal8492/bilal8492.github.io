@@ -53,7 +53,9 @@ header {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+header .wrap { display: flex; align-items: center; height: 56px; }
+nav { margin-left: auto; }
+#theme { margin-left: 22px; }
 .brand { font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; }
 nav { display: flex; align-items: center; gap: 22px; font-size: 14px; color: var(--muted); }
 nav a { transition: color 0.2s; }
@@ -149,12 +151,14 @@ footer { padding: 32px 0 48px; border-top: 1px solid var(--line); color: var(--m
   nav { gap: 16px; width: 100%; overflow-x: auto; scrollbar-width: none; white-space: nowrap; }
   nav::-webkit-scrollbar { display: none; }
   nav a { flex: none; }
-  #theme { flex: none; margin-left: auto; }
+  .brand { order: 1; }
+  #theme { order: 2; flex: none; margin-left: auto; }
+  nav { order: 3; margin-left: 0; }
   html { scroll-padding-top: 100px; }
 }
 
 /* Resume page */
-.resume { padding: 56px 0 40px; }
+.resume { padding-top: 56px; padding-bottom: 40px; }
 .resume h1 { font-size: 2rem; }
 .resume .role { color: var(--muted); margin-top: 4px; }
 .resume .meta { font-size: 14px; color: var(--muted); margin-top: 14px; display: flex; flex-wrap: wrap; gap: 4px 18px; }
