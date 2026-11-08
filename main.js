@@ -703,7 +703,7 @@
       { group: "Actions", label: "Send an email", hint: "Mail", run: open(`mailto:${EMAIL}`) },
       { group: "Links", label: "GitHub", hint: "github.com/bilal8492", run: open("https://github.com/bilal8492", true) },
       { group: "Links", label: "LinkedIn", hint: "in/bilal8492", run: open("https://linkedin.com/in/bilal8492", true) },
-      { group: "Links", label: "ReelGuard", hint: "Project", run: open("https://bilalansari.in/ReelGuard/", true) },
+      { group: "Links", label: "ReelGuard", hint: "Project", run: open("https://bilalansari.in/reelguard/", true) },
       { group: "Links", label: "Upinstall", hint: "Project", run: open("https://bilalansari.in/upinstall/", true) },
     ];
 
